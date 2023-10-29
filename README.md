@@ -1,6 +1,7 @@
 # How you can run this app/backend
 1. After clonning the repository through terminal in your local system / server you can simply run a command 'npm run dev' or 'npm run prod' to run this application
 2. exports the postman collection in the postman app to check and verify all apis json file path is - /postman collection
+3. you can connect the mongodb atlas in mongodb compass using its link which is mentioned in .env file
 
 # Below is the api endpoint which i have made during the development process
 
