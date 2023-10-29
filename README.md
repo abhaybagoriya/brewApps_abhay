@@ -3,6 +3,8 @@
 2. exports the postman collection in the postman app to check and verify all apis json file path is - /postman collection
 3. you can connect the mongodb atlas in mongodb compass using its link which is mentioned in .env file
 
+# NOTE - You can check 2nd code pattern for this task in optimized branch using command - git checkout optimized in terminal inside repo
+
 # Below is the api endpoint which i have made during the development process
 
 1. Add a Book
