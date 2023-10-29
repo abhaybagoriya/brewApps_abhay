@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "2b4121ca-09ae-4791-96cf-63911e4d83c1",
+		"name": "BrewApps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19204743"
+	},
+	"item": [
+		{
+			"name": "Add a Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"SYSTEM DESIGN INTERVIEW\",\r\n    \"author\": \"Alex Xu\",\r\n    \"summary\": \"Alex Xu is an experienced software engineer and entrepreneur. Previously, he worked at Twitter, Apple, Zynga and Oracle. He received his M.S. from Carnegie Mellon University.He has a passion for designing and implementing complex systems.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}v1/books/add",
+					"host": [
+						"{{baseurl}}v1"
+					],
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}v1/books/all",
+					"host": [
+						"{{baseurl}}v1"
+					],
+					"path": [
+						"books",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a book by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}v1/books/id?id=653e13aa30f56b52dcf3d870",
+					"host": [
+						"{{baseurl}}v1"
+					],
+					"path": [
+						"books",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "653e13aa30f56b52dcf3d870"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a book by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}v1/books/title?title=IKIGAI",
+					"host": [
+						"{{baseurl}}v1"
+					],
+					"path": [
+						"books",
+						"title"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "IKIGAI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Book Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"653e13aa30f56b52dcf3d870\",\r\n    \"title\": \"IKIGAI\",\r\n    \"author\": \"Hector Garcia And Francesc Miralles\",\r\n    \"summary\": \"The Japanese Secret to a Long and Happy Life\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}v1/books/edit",
+					"host": [
+						"{{baseurl}}v1"
+					],
+					"path": [
+						"books",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a book by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}v1/books/delete?id=653e1a7e6f047b87a7fd3fbc",
+					"host": [
+						"{{baseurl}}v1"
+					],
+					"path": [
+						"books",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "653e1a7e6f047b87a7fd3fbc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
